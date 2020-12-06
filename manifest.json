@@ -2,12 +2,22 @@
     "manifest_version": 2,
     "name": "Sample Extension",
     "version": "0.001",
-    "content_scripts":[
-    {
-        "matches":[
-            "<all_urls>"
-        ],
-        "js":["content.js"]
+    "content_scripts": [
+        {
+            "matches": [
+                "http://127.0.0.1:5500/chrome%20Extension/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icon.png"
     }
-]
 }
